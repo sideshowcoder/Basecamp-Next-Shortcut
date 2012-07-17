@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <head>
+    <script type="text/javascript" charset="utf-8">        
+      var saveData = function(){  
+        var bcAccountID = parseInt(document.getElementById("bc_account_id").value);
+        if (bcAccountID) {
+          localStorage["bcAccountID"] = bcAccountID;
+          window.location.replace("/index.html");
+        } else {
+          // ID has to be numeric!
+          document.getElementById("error").innerHTML = "Non numeric ID not supported!";
+        }
+      };
+      
+      var loadData = function(){
+        var bcAccountID = parseInt(localStorage["bcAccountID"]);
+        if (bcAccountID) {
+          document.getElementById("bc_account_id").value = bcAccountID;
+        }
+      };
+    </script>
+  </head>
+  
+  <body onload="loadData();">
+    
+    <label for="bc_account_id">Basecamp Account ID</label><input type="text" name="bc_account_id" value="" id="bc_account_id">
+    <label for="save_bc_account_id"></label><input type="button" name="save_bc_account_id" value="Save" id="save_bc_account_id" onclick="saveData();">
+    <div id="error"></div>
+    
+  </body>
+</html>
