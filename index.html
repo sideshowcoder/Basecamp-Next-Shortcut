@@ -1,20 +1,7 @@
 <!DOCTYPE html>
   <head>
-    <script type="text/javascript" charset="utf-8">
-      var BASECAMPURL = "http://basecamp.com/";
-      var redirectOnLoad = function(){
-        var bcAccountID = parseInt(localStorage["bcAccountID"]);
-        if(bcAccountID){
-          // Account ID is set redirect to basecamp
-          window.location.replace(BASECAMPURL + bcAccountID);
-        } else {
-          // Redirect to options page
-          window.location.replace("/options.html");
-        }
-      };
-    </script>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
-  
-  <body onload="redirectOnLoad();">
-  </body>
+  <body></body>
 </html>

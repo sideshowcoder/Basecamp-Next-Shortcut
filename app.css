@@ -1,0 +1,31 @@
+.container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 200px auto;
+  width: 460px;
+  padding: 20px;
+}
+
+input {
+  margin: 10px;
+  font-size: 20px;
+}
+
+input[type=button] {
+  background-color:#ededed;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:#6e6e6e;
+  font-size:20px;
+  padding:5px 50px;
+}
+
+input[type=button]:hover {
+  background-color:#cccacc;
+}
+
+input[type=button]:active {
+  position:relative;
+  top:1px;
+}
